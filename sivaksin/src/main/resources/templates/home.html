@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+    <title> Home </title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFIBw8HfCJo="
+            crossorigin="anonymous"
+    ></script>
+    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+<nav th:replace="fragments/fragment :: navbar"></nav>
+<button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+>
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="d-flex justify-content-center">
+    <div class="m-4">
+        <h2>Selamat datang di SIVAKSIN!</h2>
+        <br>
+        <h6 class="d-flex justify-content-center">Daftar Fitur:</h6>
+        <div class="d-flex justify-content-center">
+            <a th:href="@{/faskes/viewall}" class="mx-2 btn btn-outline-primary">Fasilitas Kesehatan</a>
+            <a th:href="@{/}" class="mx-2 btn btn-outline-primary">Pasien</a>
+            <a th:href="@{/}" class="mx-2 btn btn-outline-primary">Cari</a>
+        </div>
+    </div>
+</div>
+</body>
+<nav th:replace="fragments/fragment :: footer"></nav>
+</html>
